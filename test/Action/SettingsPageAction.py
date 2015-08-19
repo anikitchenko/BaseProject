@@ -1,6 +1,8 @@
 #!/usr/bin/python3.3
 # -*- coding: utf-8 -*-
 
+import time
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -19,13 +21,21 @@ class SettingsPageAction(object):
     def open_settings_page(self):
         self.driver.get(CommonEnum.SETTINGS_LEAD_PAGE_STATUS)
 
-    def handle_new_lead_status(self):
+    def create_new_lead_status(self):
         self.__wait_until_element_exist(SettingsPageSelector.ADD_LEAD_STATUS_BUTTON)
         self.__click_new_lead_status_button()
         self.__wait_until_element_exist(SettingsPageSelector.ADD_LEAD_STATUS_NAME_FIELD)
         self.__fill_name_field()
         self.__click_save_button()
         self.__wait_until_element_exist(SettingsPageSelector.NEW_LEAD_MESSAGE)
+
+    def delete_new_lead_status(self):
+        self.open_settings_page()
+        self.__wait_until_element_exist(SettingsPageSelector.ADD_LEAD_STATUS_BUTTON)
+        self.__click_destroy_lead_status_button()
+        self.__wait_until_element_exist(SettingsPageSelector.ACCEPT_REMOVE_BUTTON)
+        self.__click_accept_destroy_button()
+        time.sleep(2)
 
     def __click_new_lead_status_button(self):
         self.driver.find_element_by_css_selector(SettingsPageSelector.ADD_LEAD_STATUS_BUTTON).click()
@@ -39,3 +49,9 @@ class SettingsPageAction(object):
 
     def __wait_until_element_exist(self, selector):
         self.wait(self.driver, 200).until(EC.presence_of_element_located((By.CSS_SELECTOR, selector)))
+
+    def __click_destroy_lead_status_button(self):
+        self.driver.find_element_by_css_selector(SettingsPageSelector.LEAD_STATUS_DESTROY_BUTTON)
+
+    def __click_accept_destroy_button(self):
+        self.driver.find_element_by_css_selector(SettingsPageSelector.ACCEPT_REMOVE_BUTTON)

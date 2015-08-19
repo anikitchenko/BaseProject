@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import logging
 import unittest
 
 from selenium import webdriver
@@ -15,8 +14,6 @@ class CommonTestCase(unittest.TestCase):
         if self.browser == "firefox":
             self.driver = webdriver.Firefox()
             self.wait = WebDriverWait
-            logging.info("Opening browser Firefox")
-            self.is_browser_open = True
         self.driver.maximize_window()
         return self.driver
 

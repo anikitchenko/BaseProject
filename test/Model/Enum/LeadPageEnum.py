@@ -11,3 +11,5 @@ class LeadPageEnum(object):
     LEAD_STATUS = {1: "New",
                    2: "Working",
                    3: "Unqualified"}
+
+    LEAD_STATUS_LIST = ["New", "Working", "TestTitle", "Unqualified"]

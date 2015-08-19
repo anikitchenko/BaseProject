@@ -18,3 +18,11 @@ class LeadPageModel(object):
     def get_lead_status(self):
         lead_status = self.driver.find_element_by_css_selector(LeadPageSelector.LEAD_STATUS_LINK).text
         return lead_status
+
+    def get_list_of_status_from_drop_down(self):
+        list_of_elements_text = []
+        list_of_elements = self.driver.find_elements_by_css_selector(LeadPageSelector.LEAD_STATUS_DROP_DOWN_ELEMENTS)
+        for i in list_of_elements:
+            element = i.text
+            list_of_elements_text.append(element)
+        return list_of_elements_text

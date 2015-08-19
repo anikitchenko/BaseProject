@@ -13,4 +13,11 @@ class LeadPageSelector(object):
 
     EDIT_LEAD_BUTTON = ".btn.btn-mini.detail-edit"
     LEAD_STATUS_LINK = ".lead-status"
+    LEAD_STATUS_DROP_DOWN_ELEMENTS = ".dropdown.open li"
     LEAD_BREADCRUMBS_TITLE = ".detail-title"
+
+    LAST_LEAD_ELEMENT_FORM_LIST = ".object-list-item:last-of-type h3 a.lead-name"
+
+    DELETE_LEAD_BUTTON = "a.btn.delete"
+    ACCEPT_DELETE_LEAD_BUTTON = ".btn.btn-primary.btn-danger.confirm"
+

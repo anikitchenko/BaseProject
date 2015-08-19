@@ -10,8 +10,7 @@ def suite():
 
     test_suite = unittest.TestSuite()
 
-    # test_suite.addTest(LeadPageTestCase("test_add_new_lead"))
-    test_suite.addTest(LeadPageTestCase("test_add_new_lead_status"))
+    test_suite.addTest(LeadPageTestCase("test_add_new_lead_new_status"))
     return test_suite
 
 

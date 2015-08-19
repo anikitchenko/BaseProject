@@ -4,7 +4,7 @@
 
 class CommonEnum(object):
 
-    LOGIN = "quake+team16+skiptour@getbase.com"
+    LOGIN = "toha-nikitchenko@mail.ru"
     PASSWORD = "mythbusters_16"
 
     START_PAGE = "https://core.futuresimple.com"

@@ -5,4 +5,3 @@
 class MainPageSelector(object):
 
     LEADS_MENU_BUTTON = "#nav-item-leads"
-

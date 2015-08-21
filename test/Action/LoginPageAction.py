@@ -36,5 +36,3 @@ class LoginPageAction(object):
 
     def __wait_until_element_exist(self, selector):
         self.wait(self.driver, 200).until(EC.presence_of_element_located((By.CSS_SELECTOR, selector)))
-
-

@@ -18,6 +18,5 @@ class LeadPageSelector(object):
 
     LAST_LEAD_ELEMENT_FORM_LIST = ".object-list-item:last-of-type h3 a.lead-name"
 
-    DELETE_LEAD_BUTTON = "a.btn.delete"
-    ACCEPT_DELETE_LEAD_BUTTON = ".btn.btn-primary.btn-danger.confirm"
-
+    DELETE_LEAD_BUTTON = ".sidebar-section a.btn.delete"
+    ACCEPT_DELETE_LEAD_BUTTON = ".modal-footer a:last-of-type"

@@ -10,8 +10,8 @@ class SettingsPageModel(object):
         self.driver = driver
         self.wait = wait
 
-    def get_lead_status_new_element(self):
-        new_lead_status = self.driver.find_element_by_css_selector(SettingsPageSelector.LEAD_STATUS_LAST_ELEMENT).text
+    def get_lead_changed_status(self):
+        new_lead_status = self.driver.find_element_by_css_selector(SettingsPageSelector.LEAD_STATUS_TITLE).text
         return new_lead_status
 
     def get_new_lead_status_message(self):

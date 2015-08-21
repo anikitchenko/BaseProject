@@ -12,4 +12,4 @@ class LeadPageEnum(object):
                    2: "Working",
                    3: "Unqualified"}
 
-    LEAD_STATUS_LIST = ["New", "Working", "TestTitle", "Unqualified"]
+    LEAD_STATUS_LIST = ["TestTitle", "Working", "Unqualified"]

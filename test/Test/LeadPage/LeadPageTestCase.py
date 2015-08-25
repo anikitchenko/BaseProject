@@ -54,5 +54,3 @@ class LeadPageTestCase(unittest.TestCase):
         self.lead_page_action.open_new_lead()
         self.assertListEqual(self.lead_page_model.get_list_of_status_from_drop_down(),
                              LeadPageEnum.LEAD_STATUS_LIST, LeadPageView.INCORRECT_LIST_OF_STATUS)
-
-
